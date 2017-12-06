@@ -36,11 +36,14 @@
 * Note that it's actually using 7 points (mentioned in udacity course by prof. Bobick) but we use 8 anyways.
 * Cons: scaling is poor
 
-# normalized 8 points algorithm
+# [normalized 8 points algorithm](https://www.coursera.org/learn/robotics-perception/lecture/yuawM/bundle-adjustment-iii)
 * It overcomes the sclaing problem 8 point algorithm has
 * steps:
 	* re-center and re-scale points {x} using matrix M so that mean{x}=0 var{x}=1 (the number of points K should be greater or equal to 8)
 	* Find F by minimizing O(F) = sum(x_1^T F x_2)^2 for all points {x} where x_1 and x_2 are normalized points from the previous step
+		* This is usually done by using equation AF = 0 instead of x_1^T F x_2 = 0 to estimate F (note that we need to express A in terms of x_1 and x_2)
+		* We can solve the equation AF=0 by finding SVD of A
+		* Then we need to clean up F by forcing it to be ranked 2
 	* Project F to the nearest rank 2 matrix using SVD
 	* Undo normalization using matrix M: F = M^T F M
 
