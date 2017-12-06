@@ -32,4 +32,23 @@
 * It's computationally inefficient
 
 # 8 points algorithm
+* Use equation AF = 0 instead of x_1^T F x_2 = 0 to estimate F (note that we need to express A in terms of x_1 and x_2)
+* Note that it's actually using 7 points (mentioned in udacity course by prof. Bobick) but we use 8 anyways.
+* Cons: scaling is poor
+
+# normalized 8 points algorithm
+* It overcomes the sclaing problem 8 point algorithm has
+* steps:
+	* re-center and re-scale points {x} using matrix M so that mean{x}=0 var{x}=1 (the number of points K should be greater or equal to 8)
+	* Find F by minimizing O(F) = sum(x_1^T F x_2)^2 for all points {x} where x_1 and x_2 are normalized points from the previous step
+	* Project F to the nearest rank 2 matrix using SVD
+	* Undo normalization using matrix M: F = M^T F M
+
+# Homography
+* It defines a linear mapping between image plane 1 and image plane 2 given that all points are projecting from a single plane
+* x_2 = H x_1
+
+# [Stereo image rectification](https://www.youtube.com/watch?time_continue=177&v=1AsCPRpCvxU)
+* Warping skewed plane to an unskewed plane 
+
 
