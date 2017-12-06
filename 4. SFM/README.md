@@ -13,8 +13,7 @@
 	* [USV] = svd(C). Use SVD on data matrix
 	* Force C to be rank 3 by setting all singular values to 0 except the first 3 in S (sigma)
 	* Return U as M (camera matrix) and SV as D (shape matrix)
-	* Euclidean upgrade
-	![Euclidean upgrade](/images/euclidean_upgrade.jpg)
+	* Euclidean upgrade ![Euclidean upgrade](https://github.com/junweima/computer_vision_summaries/blob/master/4.%20SFM/images/euclidean_upgrade.jpg)
 
 
 
