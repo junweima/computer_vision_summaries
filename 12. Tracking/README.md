@@ -26,4 +26,6 @@
 
 # Particle filter
 * use particles for sampling
+[!particle filter](https://github.com/junweima/computer_vision_summaries/blob/master/12.%20Tracking/images/particle_filtering.PNG)
+
 
