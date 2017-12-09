@@ -21,6 +21,6 @@
 	* deterministic drift from posteriror from last step
 	* stochastic diffusion
 	* incorporate data
-![Kalman filter](/image/kalman_filter.jpg)
+![Kalman filter](https://github.com/junweima/computer_vision_summaries/blob/master/12.%20Tracking/images/kalman_filter.jpg)
 
 
