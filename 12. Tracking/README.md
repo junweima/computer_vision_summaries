@@ -17,10 +17,13 @@
 * argmax P(x_1:t|e_1:t)
 
 # Kalman filter
+* everything gaussian
 * Kalman filter involves a few steps:
 	* deterministic drift from posteriror from last step
 	* stochastic diffusion
 	* incorporate data
 ![Kalman filter](https://github.com/junweima/computer_vision_summaries/blob/master/12.%20Tracking/images/kalman_filter.jpg)
 
+# Particle filter
+* use particles for sampling
 
